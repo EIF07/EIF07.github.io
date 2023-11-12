@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>hello~</title>
+  
+  <subtitle>welcome to 07&#39;blog</subtitle>
+  <link href="http://eif07.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://eif07.github.io/"/>
+  <updated>2023-11-12T16:08:14.847Z</updated>
+  <id>http://eif07.github.io/</id>
+  
+  <author>
+    <name>7</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>task1</title>
+    <link href="http://eif07.github.io/2023/11/12/task1/"/>
+    <id>http://eif07.github.io/2023/11/12/task1/</id>
+    <published>2023-11-12T14:24:21.000Z</published>
+    <updated>2023-11-12T16:08:14.847Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h1><h3 id="1、Kali虚拟机采用桥接模式；物理机连接Guet-WiFi，Kali中查看网络配置并截图，能获得IP地址吗？"><a href="#1、Kali虚拟机采用桥接模式；物理机连接Guet-WiFi，Kali中查看网络配置并截图，能获得IP地址吗？" class="headerlink" title="1、Kali虚拟机采用桥接模式；物理机连接Guet-WiFi，Kali中查看网络配置并截图，能获得IP地址吗？"></a>1、Kali虚拟机采用桥接模式；物理机连接Guet-WiFi，Kali中查看网络配置并截图，能获得IP地址吗？</h3><p><img src="https://github.com/EIF07/EIF07.github.io/blob/main/2023/11/12/task1/IP1.png" alt="img"></p><p>并没有获得IP地址</p><h3 id="2、Kali虚拟机采用桥接模式；物理机连接手机热点，Kali中查看网络配置并截图，能获得IP地址吗？"><a href="#2、Kali虚拟机采用桥接模式；物理机连接手机热点，Kali中查看网络配置并截图，能获得IP地址吗？" class="headerlink" title="2、Kali虚拟机采用桥接模式；物理机连接手机热点，Kali中查看网络配置并截图，能获得IP地址吗？"></a>2、Kali虚拟机采用桥接模式；物理机连接手机热点，Kali中查看网络配置并截图，能获得IP地址吗？</h3><p><img src="https://github.com/EIF07/EIF07.github.io/blob/main/2023/11/12/task1/IP2.png" alt="img"></p><p>可以看到IP地址</p><h3 id="3、对于1、2的结果，进行总结分析。"><a href="#3、对于1、2的结果，进行总结分析。" class="headerlink" title="3、对于1、2的结果，进行总结分析。"></a>3、对于1、2的结果，进行总结分析。</h3><p>​        Kali虚拟机使用桥接模式连接到物理机，而物理机连接到手机热点。当物理机成功连接到手机热点后，Kali虚拟机能够获取手机热点分配的IP地址。这是因为<strong>桥接模式使得虚拟机和物理机处于同一局域网络中</strong>，就像它们直接连接到了同一个路由器上一样。当物理机获得了手机热点的IP地址后，Kali虚拟机会通过桥接模式共享物理机的网络连接。因此，Kali虚拟机应该能够获得与物理机相同的IP地址，并能够访问互联网。所以可以在Kali虚拟机中使用命令<code>ifconfig</code>来查看网络配置并获得IP地址。</p><p>​        校园网需要用户登录学生&#x2F;教职工个人账号才能获得有效的 IP 地址和网络访问权限。当物理机通过学生个人账号登录学校校园网后，学校的网络系统会为该账号分配一个特定的 IP 地址。但是，由于 <strong>Kali 虚拟机不具备学生账号的登录凭据</strong>，它无法直接从学校校园网获取有效的 IP 地址。因此，即使 Kali 虚拟机采用桥接模式，也无法直接获取学校校园网的 IP 地址，除非在 Kali 虚拟机内部进行了学校网络认证并获得了有效的网络访问权限。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Task&quot;&gt;&lt;a href=&quot;#Task&quot; class=&quot;headerlink&quot; title=&quot;Task&quot;&gt;&lt;/a&gt;Task&lt;/h1&gt;&lt;h3 id=&quot;1、Kali虚拟机采用桥接模式；物理机连接Guet-WiFi，Kali中查看网络配置并截图，能获得IP地址吗？&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>my first article</title>
+    <link href="http://eif07.github.io/2023/03/23/my-first-article/"/>
+    <id>http://eif07.github.io/2023/03/23/my-first-article/</id>
+    <published>2023-03-23T06:47:15.000Z</published>
+    <updated>2023-03-23T06:48:59.858Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://eif07.github.io/2023/03/23/hello-world/"/>
+    <id>http://eif07.github.io/2023/03/23/hello-world/</id>
+    <published>2023-03-23T06:29:35.107Z</published>
+    <updated>2023-03-23T06:29:35.107Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
