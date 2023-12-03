@@ -6,7 +6,7 @@
   <link href="http://eif07.github.io/atom.xml" rel="self"/>
   
   <link href="http://eif07.github.io/"/>
-  <updated>2023-11-19T15:20:00.141Z</updated>
+  <updated>2023-12-03T08:50:43.117Z</updated>
   <id>http://eif07.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://eif07.github.io/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/"/>
+    <id>http://eif07.github.io/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/</id>
+    <published>2023-12-03T08:45:13.408Z</published>
+    <updated>2023-12-03T08:50:43.117Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="DeDeCMS-v5-7-SP2-正式版-前台任意用户密码修改"><a href="#DeDeCMS-v5-7-SP2-正式版-前台任意用户密码修改" class="headerlink" title="DeDeCMS v5.7 SP2 正式版 前台任意用户密码修改"></a>DeDeCMS v5.7 SP2 正式版 前台任意用户密码修改</h1><h2 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h2><p><strong>利用phpstudy搭建网站  安装dedecms</strong></p><p>将源码内容复制，并在phpstudy的网站根目录下创建新文件夹dedecms，将源码内容复制进去</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/1.png" class=""><p>打开phpstudy，创建网站   域名设置为本地，端口号除80外随意设置，根目录设置成刚刚存储源码的文件夹</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/2.png" class=""><p>确认并重启网络服务，网站就搭建好了</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/3.png" class=""><p>继续<img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/4.png" class=""></p><p>在这里要填写数据库密码，一般都为root，之后一直下一步直至安装成功</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/5.png" class=""><p>安装成功后我们先进入网站后台<strong>开启会员功能</strong>，否则无法注册登录</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/6.png" class=""><p>至此，环境搭建完毕</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/7.png" class=""><h2 id="2-复现过程"><a href="#2-复现过程" class="headerlink" title="2.复现过程"></a>2.复现过程</h2><p>创建一个测试账号test：<br>test 初始密码1234，不设置安全问题，这个漏洞的基础就是没有安全问题</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/8.png" class=""><p>接下来后台查询 test的uid为2，为接下来的payload构造做准备</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/9.png" class=""><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/10.png" class=""><p>利用burp抓放包，可以拿到临时验证码</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/11.png" class=""><p>将key复制下来，再构造payload传参</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/12.png" class=""><p>成功跳转到该页面，重新设置密码</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/13.png" class=""><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/14.png" class=""><p>登录验证密码修改是否成功–&gt;成功登录</p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/15.png" class=""><h2 id="3-问题解决"><a href="#3-问题解决" class="headerlink" title="3.问题解决"></a>3.问题解决</h2><p>过程中出现过两个情况：</p><p><strong>1.dopost&#x3D;safequestion&amp;safequestion&#x3D;0.0&amp;safeanswer&#x3D;&amp;id&#x3D;2拿不到key</strong></p><p><strong>2.拿到key后构造payload传参跳转到的是登录页面</strong></p><p><strong>3.</strong><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/16.png" class=""></p><p>排查后发现：是用户状态非正常导致的</p><p>在完成用户注册后，应先到后台<strong>对用户状态进行审核</strong></p><img src="/2023/12/03/DeDeCMS%20v5.7%20SP2%20%E6%AD%A3%E5%BC%8F%E7%89%88%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/17.png" class=""><p>切换至正常状态方可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;DeDeCMS-v5-7-SP2-正式版-前台任意用户密码修改&quot;&gt;&lt;a href=&quot;#DeDeCMS-v5-7-SP2-正式版-前台任意用户密码修改&quot; class=&quot;headerlink&quot; title=&quot;DeDeCMS v5.7 SP2 正式版 前台任意用户密码修</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>网络渗透测试作业（持续更新...</title>
